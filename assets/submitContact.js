@@ -14,10 +14,6 @@ cc.Class({
         addressText:{
             default:null,
             type:cc.EditBox,
-        },
-        submitTip:{
-            default:null,
-            type:cc.Label,
         }
     },
     submitContact:function(){
@@ -27,7 +23,7 @@ cc.Class({
         var zhName = this.zhNameText.string;
         var telephone = this.telephoneText.string;
         var address = this.addressText.string;
-        var url = "http://localhost:8080/addContact";
+        var url = "/addContact";
         var params = "zhName="+encodeURIComponent(zhName)+"&telephone="+encodeURIComponent(telephone)+"&address="+encodeURIComponent(address);
         var request = cc.loader.getXMLHttpRequest();
         request.onreadystatechange = function () {
@@ -35,7 +31,7 @@ cc.Class({
                 var response = JSON.parse(request.responseText);
                 cc.log(response.code);
                 if(response.code===1){
-                    submitTipLabel.string="提交成功";
+                    cc.director.loadScene("contactSuccess");
                 }
             }
         };
