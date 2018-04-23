@@ -22,13 +22,11 @@ cc.Class({
 
     beginGame: function() {
         // 切换场景
-        cc.log("切换场景");
         cc.director.loadScene(this.beginSceneName);
     },
 
     closeGame: function() {
         // 关闭游戏
-        cc.log("关闭游戏");
         cc.director.loadScene(this.closeSceneName);
     },
 });
