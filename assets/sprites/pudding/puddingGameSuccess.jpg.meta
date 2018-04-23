@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "b444fd5a-40f4-473e-9c34-4907794ad91d",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "puddingGameSuccess": {
+      "ver": "1.0.3",
+      "uuid": "7ac9a64e-5dbb-41f7-9cf8-c315876ff1fc",
+      "rawTextureUuid": "b444fd5a-40f4-473e-9c34-4907794ad91d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 640,
+      "height": 1136,
+      "rawWidth": 640,
+      "rawHeight": 1136,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
