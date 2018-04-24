@@ -775,7 +775,7 @@
     "distance": 25,
     "shakeThreshold": 1000,
     "standardDistance": 400,
-    "minScale": 0.3,
+    "minScale": 0.4,
     "cdSpeed": 0.2,
     "cdTime": 4,
     "progressBar": {
