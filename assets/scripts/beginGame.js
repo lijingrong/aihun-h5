@@ -16,17 +16,16 @@ cc.Class({
     },
 
     onLoad () {
-        this.begin.node.on("click", this.beginGame, this);
-        this.close.node.on("click", this.closeGame, this);
+        this.begin.node.on("click", function () {
+            this.switchScene(this.beginSceneName);
+        }, this);
+        this.close.node.on("click", function () {
+            this.switchScene(this.closeSceneName);
+        }, this);
     },
-
-    beginGame: function() {
+    
+    switchScene: function (sceneName) {
         // 切换场景
-        cc.director.loadScene(this.beginSceneName);
-    },
-
-    closeGame: function() {
-        // 关闭游戏
-        cc.director.loadScene(this.closeSceneName);
+        cc.director.loadScene(sceneName);
     },
 });
