@@ -1,4 +1,7 @@
 
+var Global = require("Global");
+var Config = require("Config");
+
 cc.Class({
     extends: cc.Component,
 
@@ -29,7 +32,7 @@ cc.Class({
 
     onLoad() {
         // 重力感应
-        this._last_update_time = 0; 
+        this._last_update_time = 0;
         this._time = 10;   // 摇动时间最小间隔
         this._scale = 1.0;  // 缩放值
         cc.systemEvent.setAccelerometerEnabled(true);
@@ -77,8 +80,11 @@ cc.Class({
 
     /** 当碰撞产生的时候调用 */
     onCollisionEnter: function (other, self) {
-        this.unschedule(this.callback);
-        this.finishGame(this.singleSucessScene);
+        if (null !== Global.gameType && Global.gameType === Config.doubleGame) {
+            this.finishGame(this.doubleSucessScene);
+        } else {
+            this.finishGame(this.singleSucessScene);
+        }
     },
 
     start() {
@@ -86,14 +92,11 @@ cc.Class({
         this.callback = function () {
             // 当时间小于等于0，停止计时器
             if (this.cdTime <= 0) {
-                this.unschedule(this.callback);
-
                 this.finishGame(this.failScene);
             }
             if (this.cdTime == 3) {
                 cc.log("播放滴滴声");
             }
-            // cc.log(this.cdTime);
             this.cdTime--;
         };
         this.schedule(this.callback, 1);
@@ -105,6 +108,7 @@ cc.Class({
     },
 
     finishGame: function (sceneName) {
+        this.unschedule(this.callback);
         this._pingpong = false;
         this.onDestroy();
         // 切换场景

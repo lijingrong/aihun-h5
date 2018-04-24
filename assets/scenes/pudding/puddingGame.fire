@@ -783,7 +783,7 @@
     },
     "failScene": "puddingGameFail",
     "singleSucessScene": "puddingGameSuccess",
-    "doubleSucessScene": ""
+    "doubleSucessScene": "puddingDoubleGameSuccess"
   },
   {
     "__type__": "cc.ProgressBar",
