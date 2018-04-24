@@ -408,14 +408,16 @@
       "__id__": 9
     },
     "_enabled": true,
-    "beginBtn": {
+    "firstBtn": {
       "__id__": 7
     },
-    "closeBtn": {
+    "secondBtn": {
       "__id__": 11
     },
-    "beginScene": "teaCountDown3",
-    "closeScene": "home"
+    "thirdBtn": null,
+    "firstScene": "teaCountDown3",
+    "secondScene": "home",
+    "thirdScene": ""
   },
   {
     "__type__": "cc.Button",
