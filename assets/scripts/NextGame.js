@@ -11,13 +11,8 @@ cc.Class({
             default: null,
             type: cc.Button
         },
-        thirdBtn: {
-            default: null,
-            type: cc.Button
-        },
         firstScene: "",
         secondScene: "",
-        thirdScene: "",
     },
 
     onLoad() {
@@ -30,12 +25,6 @@ cc.Class({
         if (this.secondBtn !== null) {
             this.secondBtn.node.on("click", function () {
                 this.switchScene(this.secondScene);
-            }, this);
-        }
-
-        if (this.thirdBtn !== null) {
-            this.thirdBtn.node.on("click", function () {
-                this.switchScene(this.thirdScene);
             }, this);
         }
     },

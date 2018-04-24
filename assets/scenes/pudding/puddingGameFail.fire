@@ -173,7 +173,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "10b70c5c-4a32-4497-af84-3357fc50249d"
+      "__uuid__": "b5863fbd-9a23-45c0-ac19-93d9d6176ab5"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -562,9 +562,7 @@
     "secondBtn": {
       "__id__": 10
     },
-    "thirdBtn": null,
     "firstScene": "puddingBeginGame",
-    "secondScene": "share",
-    "thirdScene": ""
+    "secondScene": "share"
   }
 ]
