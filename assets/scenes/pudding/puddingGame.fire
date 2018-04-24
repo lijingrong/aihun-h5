@@ -955,9 +955,9 @@
     "progressBar": {
       "__id__": 28
     },
-    "failSceneName": "puddingGameFail",
-    "singleSucessSceneName": "puddingGameSuccess",
-    "doubleSucessSceneName": ""
+    "failScene": "puddingGameFail",
+    "singleSucessScene": "puddingGameSuccess",
+    "doubleSucessScene": ""
   },
   {
     "__type__": "cc.ProgressBar",

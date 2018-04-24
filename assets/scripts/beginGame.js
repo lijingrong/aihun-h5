@@ -3,24 +3,24 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        begin: {
+        beginBtn: {
             default: null,
             type: cc.Button
         },
-        close: {
+        closeBtn: {
             default: null,
             type: cc.Button
         },
-        beginSceneName: "",
-        closeSceneName: "",
+        beginScene: "",
+        closeScene: "",
     },
 
     onLoad () {
-        this.begin.node.on("click", function () {
-            this.switchScene(this.beginSceneName);
+        this.beginBtn.node.on("click", function () {
+            this.switchScene(this.beginScene);
         }, this);
-        this.close.node.on("click", function () {
-            this.switchScene(this.closeSceneName);
+        this.closeBtn.node.on("click", function () {
+            this.switchScene(this.closeScene);
         }, this);
     },
     

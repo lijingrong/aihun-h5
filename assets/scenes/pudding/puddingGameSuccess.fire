@@ -105,7 +105,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "pudding",
+    "_name": "bg",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -164,7 +164,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "7ac9a64e-5dbb-41f7-9cf8-c315876ff1fc"
+      "__uuid__": "6f94db7b-0404-4929-802e-1621b519e5c2"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -195,6 +195,6 @@
       "height": 1136
     },
     "_fitWidth": true,
-    "_fitHeight": true
+    "_fitHeight": false
   }
 ]

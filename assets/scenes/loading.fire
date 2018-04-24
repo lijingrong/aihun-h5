@@ -362,6 +362,7 @@
       "__id__": 9
     },
     "_enabled": true,
-    "switchSceneName": "home"
+    "time": 2,
+    "loadScene": "home"
   }
 ]

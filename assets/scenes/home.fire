@@ -1406,12 +1406,6 @@
     "speeker": {
       "__id__": 5
     },
-    "openSpeekerSpriteFrame": {
-      "__uuid__": "d775d52e-68ef-4073-b121-db778482f62e"
-    },
-    "closeSpeekerSpriteFrame": {
-      "__uuid__": "fdd33edb-62a3-476b-8848-2f462a6f698e"
-    },
     "singleBtn": {
       "__id__": 18
     },
@@ -1424,9 +1418,9 @@
     "speekerBtn": {
       "__id__": 8
     },
-    "singleSceneName": "puddingBeginGame",
-    "doubleSceneName": "teaBeginGame",
-    "descSceneName": "gameDesc",
+    "singleScene": "puddingBeginGame",
+    "doubleScene": "teaBeginGame",
+    "descScene": "gameDesc",
     "openSpeeker": true
   }
 ]

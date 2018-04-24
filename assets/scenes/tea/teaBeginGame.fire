@@ -114,7 +114,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "tea",
+    "_name": "bg",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -173,7 +173,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "1451df25-b218-4f58-a188-05b969ec6b7c"
+      "__uuid__": "f7095f88-77c2-4464-9489-f6af844fe148"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -192,7 +192,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "begin",
+    "_name": "beginBtn",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -408,14 +408,14 @@
       "__id__": 9
     },
     "_enabled": true,
-    "begin": {
+    "beginBtn": {
       "__id__": 7
     },
-    "close": {
+    "closeBtn": {
       "__id__": 11
     },
-    "beginSceneName": "teaCountDown3",
-    "closeSceneName": "gameDesc"
+    "beginScene": "teaCountDown3",
+    "closeScene": "home"
   },
   {
     "__type__": "cc.Button",
@@ -487,7 +487,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "close",
+    "_name": "closeBtn",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -589,6 +589,6 @@
       "height": 1136
     },
     "_fitWidth": true,
-    "_fitHeight": true
+    "_fitHeight": false
   }
 ]

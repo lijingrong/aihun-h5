@@ -3,15 +3,16 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        switchSceneName: ""
+        time: 1, // 倒计时间隔时间
+        loadScene: ""
     },
 
     onLoad () {
         this.callback = function () {
             // 切换场景
-            cc.director.loadScene(this.switchSceneName);
+            cc.director.loadScene(this.loadScene);
         };
-        this.schedule(this.callback, 1);
+        this.schedule(this.callback, this.time);
     },
 
 });

@@ -7,14 +7,14 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-        openSpeekerSpriteFrame: {
-            default: null,
-            type: cc.SpriteFrame
-        },
-        closeSpeekerSpriteFrame: {
-            default: null,
-            type: cc.SpriteFrame
-        },
+        // openSpeekerSpriteFrame: {
+        //     default: null,
+        //     type: cc.SpriteFrame
+        // },
+        // closeSpeekerSpriteFrame: {
+        //     default: null,
+        //     type: cc.SpriteFrame
+        // },
         singleBtn: {
             default: null,
             type: cc.Button
@@ -31,9 +31,9 @@ cc.Class({
             default: null,
             type: cc.Button
         },
-        singleSceneName: "",
-        doubleSceneName: "",
-        descSceneName: "",
+        singleScene: "",
+        doubleScene: "",
+        descScene: "",
         openSpeeker: true,
     },
 
@@ -41,15 +41,15 @@ cc.Class({
         this.openSpeeker = true;
 
         this.singleBtn.node.on("click", function () {
-            this.switchScene(this.singleSceneName);
+            this.switchScene(this.singleScene);
         }, this);
 
         this.doubleBtn.node.on("click", function () {
-            this.switchScene(this.doubleSceneName);
+            this.switchScene(this.doubleScene);
         }, this);
 
         this.descBtn.node.on("click", function () {
-            this.switchScene(this.descSceneName);
+            this.switchScene(this.descScene);
         }, this);
 
         this.speekerBtn.node.on("click", this.switchSpeeker, this);
@@ -64,11 +64,11 @@ cc.Class({
         
         // 切换喇叭图标
         if (this.openSpeeker) {
-            this.speeker.SpriteFrame = this.closeSpeekerSpriteFrame;
+            // this.speeker.SpriteFrame = this.closeSpeekerSpriteFrame;
             this.openSpeeker = false;
             // 关闭声音
         } else {
-            this.speeker.SpriteFrame = this.openSpeekerSpriteFrame;
+            // this.speeker.SpriteFrame = this.openSpeekerSpriteFrame;
             this.openSpeeker = true;
             // 打开声音
         }

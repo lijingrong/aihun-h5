@@ -22,9 +22,9 @@ cc.Class({
         },
 
         // 场景切换
-        failSceneName: "",
-        singleSucessSceneName: "",
-        doubleSucessSceneName: "",
+        failScene: "",
+        singleSucessScene: "",
+        doubleSucessScene: "",
     },
 
     onLoad() {
@@ -78,7 +78,7 @@ cc.Class({
     /** 当碰撞产生的时候调用 */
     onCollisionEnter: function (other, self) {
         this.unschedule(this.callback);
-        this.finishGame(this.singleSucessSceneName);
+        this.finishGame(this.singleSucessScene);
     },
 
     start() {
@@ -88,7 +88,7 @@ cc.Class({
             if (this.cdTime <= 0) {
                 this.unschedule(this.callback);
 
-                this.finishGame(this.failSceneName);
+                this.finishGame(this.failScene);
             }
             if (this.cdTime == 3) {
                 cc.log("播放滴滴声");
