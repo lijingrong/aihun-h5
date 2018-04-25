@@ -33,7 +33,7 @@ cc.Class({
 
     onLoad () {
         var Config = require("Config");
-        var url = Config.domain+"/getQRCode";
+        var url = Config.domain+"/aihun/getQRCode";
         var self = this;
         var request = cc.loader.getXMLHttpRequest();
         var params = "uid=uid";

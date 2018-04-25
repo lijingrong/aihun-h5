@@ -23,7 +23,7 @@ cc.Class({
         var zhName = this.zhNameText.string;
         var telephone = this.telephoneText.string;
         var address = this.addressText.string;
-        var url = "/addContact";
+        var url = "/aihun/addContact";
         var params = "zhName="+encodeURIComponent(zhName)+"&telephone="+encodeURIComponent(telephone)+"&address="+encodeURIComponent(address);
         var request = cc.loader.getXMLHttpRequest();
         request.onreadystatechange = function () {
