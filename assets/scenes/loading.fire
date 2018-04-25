@@ -363,6 +363,6 @@
     },
     "_enabled": true,
     "time": 2,
-    "loadScene": "home"
+    "loadNewScene": "home"
   }
 ]

@@ -261,6 +261,6 @@
     },
     "_enabled": true,
     "time": 1,
-    "loadScene": "teaGame"
+    "loadNewScene": "teaGame"
   }
 ]

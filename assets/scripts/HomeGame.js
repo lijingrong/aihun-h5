@@ -44,7 +44,7 @@ cc.Class({
 
         this.singleBtn.node.on("click", function () {
             this.switchScene(this.singleScene);
-            Global.gameType = Config.doubleGame;
+            Global.gameType = Config.singleGame;
         }, this);
 
         this.doubleBtn.node.on("click", function () {

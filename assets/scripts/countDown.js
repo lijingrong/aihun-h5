@@ -4,13 +4,13 @@ cc.Class({
 
     properties: {
         time: 1, // 倒计时间隔时间
-        loadScene: ""
+        loadNewScene: ""
     },
 
     onLoad () {
         this.callback = function () {
             // 切换场景
-            cc.director.loadScene(this.loadScene);
+            cc.director.loadScene(this.loadNewScene);
         };
         this.schedule(this.callback, this.time);
     },

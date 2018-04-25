@@ -35,15 +35,21 @@ cc.Class({
         this._last_update_time = 0;
         this._time = 10;   // 摇动时间最小间隔
         this._scale = 1.0;  // 缩放值
-        cc.systemEvent.setAccelerometerEnabled(true);
-        cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
+        this._enableDeviceMotion();
 
         // 进度条
         this.progressBar.progress = 1.0;
         this._pingpong = true;  // 进度变动控制
     },
 
-    onDestroy() {
+    /** 启用重力感应 */
+    _enableDeviceMotion() {
+        cc.systemEvent.setAccelerometerEnabled(true);
+        cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
+    },
+
+    /** 销毁重力感应 */
+    _destroyDeviceMotion() {
         cc.systemEvent.setAccelerometerEnabled(false);
         cc.systemEvent.off(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
     },
@@ -110,7 +116,7 @@ cc.Class({
     finishGame: function (sceneName) {
         this.unschedule(this.callback);
         this._pingpong = false;
-        this.onDestroy();
+        this._destroyDeviceMotion();
         // 切换场景
         cc.director.loadScene(sceneName);
     },
