@@ -31,21 +31,33 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad () {
+        var Config = require("Config");
+        var url = Config.domain+"/getQRCode";
+        var self = this;
+        var request = cc.loader.getXMLHttpRequest();
+        var params = "uid=uid";
+        cc.log(Config.test);
+        Config.test=2;
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
+                var response = JSON.parse(request.responseText);
+                cc.log(response.imgUrl);
+                cc.loader.load(response.imgUrl,function (err, texture) {
+                    var frame=new cc.SpriteFrame(texture);
+                    self.node.getComponent(cc.Sprite).spriteFrame=frame;
+                    cc.log(Config.test);
+               });
+            }
+        };
+        request.open("POST", url, true);
+        request.setRequestHeader("CONTENT-TYPE","application/x-www-form-urlencoded");
+        request.send(params);
+    },
 
     start () {
 
     },
-
-    loadAddContactScene:function(){
-        cc.director.loadScene("contact");
-    },
-    loadShare:function(){
-        cc.director.loadScene("share");
-    },
-    loadHome:function(){
-        cc.director.loadScene("home");
-    }
 
     // update (dt) {},
 });

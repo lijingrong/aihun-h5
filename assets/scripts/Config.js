@@ -2,5 +2,8 @@ var Config = Config || {};
 Config.gearInfo = [315,45,135,225];
 Config.singleGame = 1; // 单人游戏标识
 Config.doubleGame = 2; // 双人游戏标识
-
+Config.domain="http://192.168.1.111:8080";
+Config.isSingle=1;
+Config.isFollower=0;
+Config.uid='';
 module.exports = Config;
