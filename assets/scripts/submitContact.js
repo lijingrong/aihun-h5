@@ -17,14 +17,13 @@ cc.Class({
         }
     },
     submitContact:function(){
-        cc.log("button clicked!");
-        cc.log(this.zhNameText.string);
+        var Config = require("Config");
         var submitTipLabel = this.submitTip;
         var zhName = this.zhNameText.string;
         var telephone = this.telephoneText.string;
         var address = this.addressText.string;
         var url = "/aihun/addContact";
-        var params = "zhName="+encodeURIComponent(zhName)+"&telephone="+encodeURIComponent(telephone)+"&address="+encodeURIComponent(address);
+        var params = "userId="+encodeURIComponent(Config.uid)+"&zhName="+encodeURIComponent(zhName)+"&telephone="+encodeURIComponent(telephone)+"&address="+encodeURIComponent(address);
         var request = cc.loader.getXMLHttpRequest();
         request.onreadystatechange = function () {
             if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
