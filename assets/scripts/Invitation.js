@@ -34,7 +34,7 @@ cc.Class({
             var _self = this;
             var _url = Config.domain + "/aihun/isFollowerJoin";
             var _request = cc.loader.getXMLHttpRequest();
-            var _params = "gameTeamId=" + Config.gameTeamId;
+            var _params = "gameTeamId=" + Config.gameTeamId  + "&userId=" + Config.uid;
             _request.onreadystatechange = function () {
                 if (_request.readyState == 4 && (_request.status >= 200 && _request.status < 400)) {
                     var _response = JSON.parse(_request.responseText);

@@ -53,7 +53,7 @@ cc.Class({
         var Config = require("Config");
         var self = this;
         var url = Config.domain + "/aihun/postSharkTime";
-        var params = "gameTeamId=" + Config.gameTeamId + "&uid=" + Config.uid;
+        var params = "gameTeamId=" + Config.gameTeamId + "&uid=" + Config.uid  + "&userId=" + Config.uid;
         var request = cc.loader.getXMLHttpRequest();
         request.onreadystatechange = function () {
             if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {

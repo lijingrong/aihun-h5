@@ -16,7 +16,7 @@ cc.Class({
                 var Config = require("Config");
                 var self = this;
                 var url = Config.domain + "/aihun/isPartnerSharked";
-                var params = "gameTeamId=" + Config.gameTeamId;
+                var params = "gameTeamId=" + Config.gameTeamId + "&userId=" + Config.uid;
                 var request = cc.loader.getXMLHttpRequest();
                 request.onreadystatechange = function () {
                     if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
