@@ -25,6 +25,7 @@ cc.Class({
                         var response = JSON.parse(request.responseText);
                         if(response.code===1){
                             Config.isFollower=1;
+                            Config.isSingle=0;
                             cc.director.loadScene("teaBeginGame");
                         }else{
                             // 切换场景

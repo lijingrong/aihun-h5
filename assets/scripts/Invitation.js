@@ -40,11 +40,10 @@ cc.Class({
         request.onreadystatechange = function () {
             if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
                 var response = JSON.parse(request.responseText);
-                cc.log(response.imgUrl);
+                Config.isSingle=0;
                 cc.loader.load(response.imgUrl,function (err, texture) {
                     var frame=new cc.SpriteFrame(texture);
                     self.node.getComponent(cc.Sprite).spriteFrame=frame;
-                    cc.log(Config.test);
                });
             }
         };
