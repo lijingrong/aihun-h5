@@ -9,26 +9,26 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
+    onLoad() {
         var self = this;
         var Config = require("Config");
-        Config.uid=this.getParam("userId");
+        Config.uid = this.getParam("userId");
         this.callback = function () {
             var uid = this.getParam("uid");
-            if(uid===null){
+            if (uid === null) {
                 cc.director.loadScene(self.loadNewScene);
-            }else{
-                var url = Config.domain+"/aihun/getGameTeam?uid="+uid+"&userId="+Config.uid;
+            } else {
+                var url = Config.domain + "/aihun/getGameTeam?uid=" + uid + "&userId=" + Config.uid;
                 var request = cc.loader.getXMLHttpRequest();
                 request.onreadystatechange = function () {
                     if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
                         var response = JSON.parse(request.responseText);
-                        if(response.code===1){
-                            Config.isFollower=1;
-                            Config.isSingle=0;
-                            Config.gameTeamId=response.data.id;
+                        if (response.code === 1) {
+                            Config.isFollower = 1;
+                            Config.isSingle = 0;
+                            Config.gameTeamId = response.data.id;
                             cc.director.loadScene("teaBeginGame");
-                        }else{
+                        } else {
                             // 切换场景
                             cc.director.loadScene(self.loadNewScene);
                         }
@@ -41,16 +41,16 @@ cc.Class({
         this.schedule(this.callback, this.time);
     },
 
-    start () {
+    start() {
 
     },
 
     // update (dt) {},
 
-    getParam:function(name){
-        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    getParam: function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
-        if(r!=null)return  unescape(r[2]); return null;
+        if (r != null) return unescape(r[2]); return null;
     }
 
 });

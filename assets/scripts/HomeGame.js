@@ -1,7 +1,4 @@
 
-var Global = require("Global");
-var Config = require("Config");
-
 cc.Class({
     extends: cc.Component,
 
@@ -40,16 +37,12 @@ cc.Class({
     },
 
     onLoad() {
-        Global.openSpeeker = true;
-
         this.singleBtn.node.on("click", function () {
             this.switchScene(this.singleScene);
-            Global.gameType = Config.singleGame;
         }, this);
 
         this.doubleBtn.node.on("click", function () {
             this.switchScene(this.doubleScene);
-            Global.gameType = Config.doubleGame;
         }, this);
 
         this.descBtn.node.on("click", function () {
@@ -65,15 +58,15 @@ cc.Class({
     },
 
     switchSpeeker: function () {
-        
+        var Config = require("Config");
         // 切换喇叭图标
-        if (Global.openSpeeker) {
+        if (Config.isOpenSpeeker) {
             // this.speeker.SpriteFrame = this.closeSpeekerSpriteFrame;
-            Global.openSpeeker = false;
+            Config.isOpenSpeeker = false;
             // 关闭声音
         } else {
             // this.speeker.SpriteFrame = this.openSpeekerSpriteFrame;
-            Global.openSpeeker = true;
+            Config.isOpenSpeeker = true;
             // 打开声音
         }
     },

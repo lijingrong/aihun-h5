@@ -401,20 +401,19 @@
     "groupIndex": 0
   },
   {
-    "__type__": "1f63fco9cREa7mVvU06M3Yf",
+    "__type__": "fae6exnVmNJP5oGVENwDEUr",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 9
     },
     "_enabled": true,
-    "firstBtn": {
+    "nextBtn": {
       "__id__": 7
     },
-    "secondBtn": null,
-    "thirdBtn": null,
-    "firstScene": "prize",
-    "secondScene": "",
-    "thirdScene": ""
+    "prompt": {
+      "__uuid__": "4be9dea5-3944-40d6-8c28-a9846bb1b576"
+    },
+    "loadNewScene": "prize"
   }
 ]

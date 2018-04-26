@@ -1,5 +1,3 @@
-
-var Global = require("Global");
 var Config = require("Config");
 
 cc.Class({
@@ -86,7 +84,7 @@ cc.Class({
 
     /** 当碰撞产生的时候调用 */
     onCollisionEnter: function (other, self) {
-        if (null !== Global.gameType && Global.gameType === Config.doubleGame) {
+        if (Config.isSingle === 0) {  // 双人游戏时跳转
             this.finishGame(this.doubleSucessScene);
         } else {
             this.finishGame(this.singleSucessScene);

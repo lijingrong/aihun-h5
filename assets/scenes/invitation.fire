@@ -270,7 +270,9 @@
     "node": {
       "__id__": 5
     },
-    "_enabled": true
+    "_enabled": true,
+    "time": 1,
+    "loadNewScene": "puddingBeginGame"
   },
   {
     "__type__": "cc.Canvas",
