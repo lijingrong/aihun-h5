@@ -7,4 +7,5 @@ Config.domain="";
 Config.isSingle=1;
 Config.isFollower=0;
 Config.uid='';
+Config.gameTeamId='';
 module.exports = Config;

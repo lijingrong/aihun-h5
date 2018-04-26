@@ -41,6 +41,7 @@ cc.Class({
             if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
                 var response = JSON.parse(request.responseText);
                 Config.isSingle=0;
+                Config.gameTeamId=response.gameTeamId;
                 cc.loader.load(response.imgUrl,function (err, texture) {
                     var frame=new cc.SpriteFrame(texture);
                     self.node.getComponent(cc.Sprite).spriteFrame=frame;

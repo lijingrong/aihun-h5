@@ -26,6 +26,7 @@ cc.Class({
                         if(response.code===1){
                             Config.isFollower=1;
                             Config.isSingle=0;
+                            Config.gameTeamId=response.data.id;
                             cc.director.loadScene("teaBeginGame");
                         }else{
                             // 切换场景
