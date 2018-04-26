@@ -52,7 +52,7 @@ cc.Class({
     /** 摇动时提交后台，判断A，B用户是否同时摇动 */
     togetherShake() {
         this._destroyDeviceMotion();
-        
+        cc.director.loadScene(this.loadNewScene);
         // var url = "/togetherShake";
         // var params = "zhName=" + encodeURIComponent(zhName) + "&telephone=" + encodeURIComponent(telephone) + "&address=" + encodeURIComponent(address);
         // var request = cc.loader.getXMLHttpRequest();
