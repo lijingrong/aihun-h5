@@ -18,7 +18,7 @@ cc.Class({
             if(uid===null){
                 cc.director.loadScene(self.loadNewScene);
             }else{
-                var url = Config.domain+"/aihun/getGameTeam?uid="+uid;
+                var url = Config.domain+"/aihun/getGameTeam?uid="+uid+"&userId="+Config.uid;
                 var request = cc.loader.getXMLHttpRequest();
                 request.onreadystatechange = function () {
                     if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {

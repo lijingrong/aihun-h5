@@ -36,9 +36,7 @@ cc.Class({
         var url = Config.domain+"/aihun/getQRCode";
         var self = this;
         var request = cc.loader.getXMLHttpRequest();
-        var params = "uid=uid";
-        cc.log(Config.test);
-        Config.test=2;
+        var params = "userId="+Config.uid;
         request.onreadystatechange = function () {
             if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
                 var response = JSON.parse(request.responseText);
