@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 30
+        "__id__": 31
       }
     ],
     "_tag": -1,
@@ -79,6 +79,9 @@
     "_components": [
       {
         "__id__": 29
+      },
+      {
+        "__id__": 30
       }
     ],
     "_prefab": null,
@@ -1228,6 +1231,18 @@
     "_fitHeight": false
   },
   {
+    "__type__": "43c84B2RGlL8ZOlMBRW8WK7",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "audio": {
+      "__uuid__": "929cc021-c01f-4edd-8400-2b72a49aba21"
+    }
+  },
+  {
     "__type__": "cc.Node",
     "_name": "homeGame",
     "_objFlags": 0,
@@ -1239,7 +1254,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 31
+        "__id__": 32
       }
     ],
     "_prefab": null,
@@ -1284,7 +1299,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 30
+      "__id__": 31
     },
     "_enabled": true,
     "speeker": {
@@ -1304,7 +1319,6 @@
     },
     "singleScene": "puddingBeginGame",
     "doubleScene": "invitation",
-    "descScene": "gameDesc",
-    "openSpeeker": true
+    "descScene": "gameDesc"
   }
 ]
