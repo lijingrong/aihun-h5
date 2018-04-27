@@ -1,6 +1,6 @@
 var Config = Config || {};
 Config.gearInfo = [315, 45, 135, 225];
-// Config.domain = "http://192.168.1.164:8080";
+// Config.domain = "http://192.168.1.101:8080";
 Config.domain = "";
 Config.isSingle = 1;
 Config.isFollower = 0;

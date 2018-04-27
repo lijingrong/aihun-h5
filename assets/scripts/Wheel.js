@@ -51,7 +51,7 @@ cc.Class({
 
     // use this for initialization
     onLoad() {
-        cc.log("....onload");
+        var Config = require("Config");
         this.wheelState = 0;    
         this.curSpeed = 0;
         this.spinTime = 0;                   //减速前旋转时间
@@ -61,11 +61,23 @@ cc.Class({
         this.wheelSp.node.rotation = this.defaultAngle;
         this.finalAngle = 0;                 //最终结果指定的角度
         this.effectFlag = 0;                 //用于音效播放
-        
-        if(!cc.sys.isBrowser)
-        {
-            cc.loader.loadRes('Sound/game_turntable', function(err,res){if(err){cc.log('...err:'+err);}});
-        }
+        var self = this;
+        var url = Config.domain + "/aihun/draw?userId=" + Config.uid;
+                var request = cc.loader.getXMLHttpRequest();
+                request.onreadystatechange = function () {
+                    if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
+                        var response = JSON.parse(request.responseText);
+                        if (response.code === 1) {
+                            self.targetID = response.drawResult;
+                        } else {
+                            self.targetID=3;
+                        }
+                    }else{
+                        self.targetID=3;
+                    }
+                };
+                request.open("GET", url, true);
+                request.send(null);
         this.spinBtn.node.on(cc.Node.EventType.TOUCH_END,function(event)
         {
             cc.log("begin spin");
@@ -94,26 +106,6 @@ cc.Class({
         {
             this.finalAngle += this.gearAngle;
         }
-    },
-    editBoxDidBegin:function(edit)
-    {
-    },
-    editBoxDidChanged:function(text)
-    {
-    },
-    editBoxDidEndEditing:function(edit)
-    {
-        var res = parseInt(edit.string);
-        if(isNaN(res))
-        {
-            if(cc.sys.isBrowser)
-            {
-                alert('please input a number!');
-            }else cc.log(".....invalid input");
-            this.targetID = Math.round(Math.random()*(this.gearNum-1));
-            return;
-        }
-        this.targetID = res;
     },
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
@@ -155,7 +147,6 @@ cc.Class({
                 // cc.log('....开始减速');
                 //设置目标角度
                 var Config = require("Config");
-                this.targetID=1;
                 this.finalAngle = Config.gearInfo[this.targetID];
                 this.maxSpeed = this.curSpeed;
                 if(this.springback)
