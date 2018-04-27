@@ -13,7 +13,7 @@ cc.Class({
 
     onLoad () {
         var self = this;
-        this.current = cc.audioEngine.play(this.audio, true, 1);
+        //this.current = cc.audioEngine.play(this.audio, true, 1);
         this.node.on("click",function(event){
             self.clickMusicBtn();
         });
@@ -34,15 +34,18 @@ cc.Class({
     },
     clickMusicBtn:function(){
         var Config = require("Config");
+        var self = this;
         if(Config.isOpenSpeeker){
             this.stopMusic();
             Config.isOpenSpeeker=false;
-            var self = this;
             cc.loader.loadRes("closeMusic", cc.SpriteFrame, function (err, spriteFrame) {
                 self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
             });
         }else{
             this.playMusic();
+            cc.loader.loadRes("openMusic", cc.SpriteFrame, function (err, spriteFrame) {
+                self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+            });
             Config.isOpenSpeeker=true;
         }
     }

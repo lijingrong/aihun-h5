@@ -22,6 +22,10 @@ cc.Class({
         var zhName = this.zhNameText.string;
         var telephone = this.telephoneText.string;
         var address = this.addressText.string;
+        if(zhName===null || telephone===null || address===null 
+            ||zhName.trim()==='' || telephone.trim()===''||address.trim()===''){
+            alert("请把信息填写完整！");
+        }
         var url = "/aihun/addContact";
         var params = "userId=" + encodeURIComponent(Config.uid) + "&zhName=" + encodeURIComponent(zhName) + "&telephone=" + encodeURIComponent(telephone) + "&address=" + encodeURIComponent(address);
         var request = cc.loader.getXMLHttpRequest();
