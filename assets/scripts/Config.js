@@ -6,5 +6,5 @@ Config.isSingle = 1;
 Config.isFollower = 0;
 Config.uid = '';
 Config.gameTeamId = '';
-Config.isOpenSpeeker = false;  // 打开声音状态，默认关闭
+Config.isOpenSpeeker = true;  // 打开声音状态，默认打开
 module.exports = Config;
