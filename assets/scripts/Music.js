@@ -11,42 +11,44 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
+    onLoad() {
         var self = this;
-        //this.current = cc.audioEngine.play(this.audio, true, 1);
-        this.node.on("click",function(event){
+        this.playMusic();
+        this.node.on("click", function (event) {
             self.clickMusicBtn();
         });
     },
 
-    start () {
+    start() {
 
     },
     onDestroy: function () {
         cc.audioEngine.stop(this.current);
     },
 
-    stopMusic:function(){
+    stopMusic: function () {
         cc.audioEngine.stop(this.current);
     },
-    playMusic:function(){
+
+    playMusic: function () {
         this.current = cc.audioEngine.play(this.audio, true, 1);
     },
-    clickMusicBtn:function(){
+
+    clickMusicBtn: function () {
         var Config = require("Config");
         var self = this;
-        if(Config.isOpenSpeeker){
+        if (Config.isOpenSpeeker) {
             this.stopMusic();
-            Config.isOpenSpeeker=false;
+            Config.isOpenSpeeker = false;
             cc.loader.loadRes("closeMusic", cc.SpriteFrame, function (err, spriteFrame) {
                 self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
             });
-        }else{
+        } else {
             this.playMusic();
             cc.loader.loadRes("openMusic", cc.SpriteFrame, function (err, spriteFrame) {
                 self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
             });
-            Config.isOpenSpeeker=true;
+            Config.isOpenSpeeker = true;
         }
     }
     // update (dt) {},
