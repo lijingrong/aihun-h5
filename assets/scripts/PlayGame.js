@@ -21,9 +21,14 @@ cc.Class({
             default: null,
             type: cc.ProgressBar
         },
+        audio: {
+            default: null,
+            url: cc.AudioClip,
+        },
 
         // 场景切换
-        failScene: "",
+        singleFailScene: "",
+        doubleFailScene: "",
         singleSucessScene: "",
         doubleSucessScene: "",
     },
@@ -91,19 +96,37 @@ cc.Class({
         }
     },
 
+    onDestroy: function () {
+        cc.audioEngine.stop(this.didi);
+    },
+
+    stopMusic: function () {
+        cc.audioEngine.stop(this.didi);
+    },
+
+    playMusic: function () {
+        this.didi = cc.audioEngine.play(this.audio, true, 1);
+    },
+
     start() {
+        var self = this;
         /** 倒计时开始 */
-        this.callback = function () {
+        this.countDown = function () {
             // 当时间小于等于0，停止计时器
-            if (this.cdTime <= 0) {
-                this.finishGame(this.failScene);
+            if (self.cdTime <= 0) {
+                self.stopMusic();
+                if (Config.isSingle === 0) {  // 双人游戏时跳转
+                    self.finishGame(self.doubleFailScene);
+                } else {
+                    self.finishGame(self.singleFailScene);
+                }
             }
-            if (this.cdTime == 3) {
-                cc.log("播放滴滴声");
+            if (self.cdTime == 3) {
+                self.playMusic();
             }
-            this.cdTime--;
+            self.cdTime--;
         };
-        this.schedule(this.callback, 1);
+        this.schedule(this.countDown, 1);
         /** 倒计时结束 */
 
         /** 碰撞体系代码 */
@@ -112,7 +135,7 @@ cc.Class({
     },
 
     finishGame: function (sceneName) {
-        this.unschedule(this.callback);
+        this.unschedule(this.countDown);
         this._pingpong = false;
         this._destroyDeviceMotion();
         // 切换场景

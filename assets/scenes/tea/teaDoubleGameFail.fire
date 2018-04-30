@@ -173,7 +173,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "12793be4-be85-47ce-b445-705c0e33eeff"
+      "__uuid__": "3f0ebeb7-3a64-4b6f-b9ce-101fc211a068"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -562,7 +562,7 @@
     "secondBtn": {
       "__id__": 10
     },
-    "firstScene": "teaBeginGame",
+    "firstScene": "home",
     "secondScene": "share"
   }
 ]

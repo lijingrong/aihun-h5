@@ -24,7 +24,7 @@
     "_active": true,
     "_components": [],
     "_prefab": null,
-    "_id": "64b0e0db-76e4-420c-9079-1c9b41938e64",
+    "_id": "1fec60a8-bb40-4c35-91d0-91da6eaef449",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -173,7 +173,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "962e4424-6f49-474e-8f5c-d62a0eef18fd"
+      "__uuid__": "36ca66b4-ad75-43b8-abcf-eae391139b77"
     },
     "_type": 0,
     "_sizeMode": 1,

@@ -763,7 +763,11 @@
     "progressBar": {
       "__id__": 21
     },
-    "failScene": "teaGameFail",
+    "audio": {
+      "__uuid__": "08b3c3d0-0eab-4295-b73b-2eb19b2a5e92"
+    },
+    "singleFailScene": "teaDoubleGameFail",
+    "doubleFailScene": "teaDoubleGameFail",
     "singleSucessScene": "teaDoubleGameSuccess",
     "doubleSucessScene": "teaDoubleGameSuccess"
   },

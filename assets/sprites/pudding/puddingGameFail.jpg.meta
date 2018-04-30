@@ -1,14 +1,14 @@
 {
   "ver": "1.0.0",
-  "uuid": "eed0f920-8a3f-48bc-95fd-c89cda19f440",
+  "uuid": "2120120f-ad16-416f-a727-57e221beb4b9",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
     "puddingGameFail": {
       "ver": "1.0.3",
-      "uuid": "b5863fbd-9a23-45c0-ac19-93d9d6176ab5",
-      "rawTextureUuid": "eed0f920-8a3f-48bc-95fd-c89cda19f440",
+      "uuid": "962e4424-6f49-474e-8f5c-d62a0eef18fd",
+      "rawTextureUuid": "2120120f-ad16-416f-a727-57e221beb4b9",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

@@ -781,7 +781,11 @@
     "progressBar": {
       "__id__": 22
     },
-    "failScene": "puddingGameFail",
+    "audio": {
+      "__uuid__": "08b3c3d0-0eab-4295-b73b-2eb19b2a5e92"
+    },
+    "singleFailScene": "puddingGameSingleFail",
+    "doubleFailScene": "puddingGameDoubleFail",
     "singleSucessScene": "puddingGameSuccess",
     "doubleSucessScene": "puddingDoubleGameSuccess"
   },
