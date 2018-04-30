@@ -260,6 +260,9 @@
       "__id__": 6
     },
     "_enabled": true,
+    "audio": {
+      "__uuid__": "08b3c3d0-0eab-4295-b73b-2eb19b2a5e92"
+    },
     "time": 1,
     "loadNewScene": "puddingCountDown2"
   }
