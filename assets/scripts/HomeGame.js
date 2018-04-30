@@ -21,17 +21,23 @@ cc.Class({
     },
 
     onLoad() {
-        this.singleBtn.node.on("click", function () {
-            this.switchScene(this.singleScene);
-        }, this);
-
-        this.doubleBtn.node.on("click", function () {
-            this.switchScene(this.doubleScene);
-        }, this);
-
-        this.descBtn.node.on("click", function () {
-            this.switchScene(this.descScene);
-        }, this);
+        if (this.singleBtn !== null) {
+            this.singleBtn.node.on("click", function () {
+                this.switchScene(this.singleScene);
+            }, this);
+        }
+        
+        if (this.doubleBtn !== null) {
+            this.doubleBtn.node.on("click", function () {
+                this.switchScene(this.doubleScene);
+            }, this);
+        }
+        
+        if (this.descBtn !== null) {
+            this.descBtn.node.on("click", function () {
+                this.switchScene(this.descScene);
+            }, this);
+        }
     },
 
     switchScene: function (sceneName) {
