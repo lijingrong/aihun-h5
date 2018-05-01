@@ -1378,7 +1378,7 @@
     "cows": {
       "__id__": 32
     },
-    "distance": 25,
+    "distance": 20,
     "shakeThreshold": 1000,
     "standardDistance": 400,
     "minScale": 0.4,
