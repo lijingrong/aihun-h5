@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "99f28de1-7968-4bb0-8156-d7b37d8f8063",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "leftThermometer": {
+      "ver": "1.0.3",
+      "uuid": "03b2e879-4d27-434b-af77-4521ba6b33a0",
+      "rawTextureUuid": "99f28de1-7968-4bb0-8156-d7b37d8f8063",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 142,
+      "height": 831,
+      "rawWidth": 142,
+      "rawHeight": 831,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

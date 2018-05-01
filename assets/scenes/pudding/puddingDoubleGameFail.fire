@@ -562,7 +562,7 @@
     "secondBtn": {
       "__id__": 10
     },
-    "firstScene": "home",
+    "firstScene": "restart",
     "secondScene": "share"
   }
 ]

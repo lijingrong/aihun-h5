@@ -1,0 +1,67 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "roadBRun",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2.6666666666666665,
+  "sample": 3,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "dc0ef616-ef73-4eb2-9050-8e2fa4130425"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "4882f95a-33ab-4833-99d9-9500c556734e"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "61b07a9d-e01d-4869-b23e-3d755c666022"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "e96bf6ef-2328-4420-8299-513fbd2d636a"
+            }
+          },
+          {
+            "frame": 1.3333333333333333,
+            "value": {
+              "__uuid__": "aed7a757-a748-430f-9c46-318c39ff54b7"
+            }
+          },
+          {
+            "frame": 1.6666666666666667,
+            "value": {
+              "__uuid__": "44e8f76e-167c-4dec-b93f-6150747b7c9b"
+            }
+          },
+          {
+            "frame": 2,
+            "value": {
+              "__uuid__": "839b6dd8-cbe4-462a-82db-b2f6daea3e34"
+            }
+          },
+          {
+            "frame": 2.3333333333333335,
+            "value": {
+              "__uuid__": "da24150b-e165-4c5d-b9cb-19e8b5532884"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
