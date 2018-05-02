@@ -13,7 +13,7 @@ cc.Class({
 
     onLoad () {
         if (this.audio !== null) {
-            this.didi = cc.audioEngine.play(this.audio, true, 1);
+            this.didi = cc.audioEngine.play(this.audio, false, 1);
         }
 
         this.countDown = function () {
