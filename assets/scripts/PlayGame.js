@@ -90,7 +90,7 @@ cc.Class({
     /** 当碰撞产生的时候调用 */
     onCollisionEnter: function (other, self) {
         if (Config.isSingle === 0) {  // 双人游戏时跳转
-            this.finishGame(this.doubleSucessScene);
+            this.saveGameState(1, this.doubleSucessScene);
         } else {
             this.finishGame(this.singleSucessScene);
         }
@@ -116,7 +116,7 @@ cc.Class({
             if (self.cdTime <= 0) {
                 self.stopMusic();
                 if (Config.isSingle === 0) {  // 双人游戏时跳转
-                    self.finishGame(self.doubleFailScene);
+                    self.saveGameState(0, self.doubleFailScene);
                 } else {
                     self.finishGame(self.singleFailScene);
                 }
@@ -153,6 +153,22 @@ cc.Class({
             progress -= dt * this.cdSpeed;
         }
         progressBar.progress = progress;
+    },
+
+    /** 双人模式下，游戏成功或失败，需要请求后台记录下状态 */
+    saveGameState: function (state, nextScene) {
+        var url = Config.domain + "/aihun/postGameStatus";
+        var self = this;
+        var request = cc.loader.getXMLHttpRequest();
+        var params = "gameTeamId=" + Config.gameTeamId + "&userId=" + Config.uid + "&gameStatus=" + state;
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
+                self.finishGame(nextScene);
+            }
+        };
+        request.open("POST", url, true);
+        request.setRequestHeader("CONTENT-TYPE", "application/x-www-form-urlencoded");
+        request.send(params);
     },
 
 });

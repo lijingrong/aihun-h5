@@ -342,6 +342,8 @@
     },
     "_enabled": true,
     "loadNewScene": "teaDoubleRemixSuccess",
-    "shakeThreshold": 2000
+    "shakeThreshold": 2000,
+    "time": 1,
+    "restartScene": "restart"
   }
 ]

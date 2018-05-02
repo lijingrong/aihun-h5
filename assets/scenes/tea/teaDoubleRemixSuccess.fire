@@ -411,6 +411,8 @@
     "nextBtn": {
       "__id__": 7
     },
-    "loadNewScene": "prize"
+    "loadNewScene": "prize",
+    "time": 1,
+    "restartScene": "restart"
   }
 ]
