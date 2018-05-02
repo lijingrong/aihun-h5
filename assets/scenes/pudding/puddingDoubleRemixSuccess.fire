@@ -232,7 +232,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 1,
+      "x": 0,
       "y": -478
     },
     "_skewX": 0,
@@ -411,8 +411,9 @@
     "nextBtn": {
       "__id__": 7
     },
-    "loadNewScene": "prize",
+    "prizeScene": "prize",
     "time": 1,
-    "restartScene": "restart"
+    "restartScene": "restart",
+    "promptScene": "puddingDoubleRemixSuccessPrompt"
   }
 ]

@@ -7,9 +7,10 @@ cc.Class({
             default: null,
             type: cc.Button
         },
-        loadNewScene: "",
+        prizeScene: "",
         time: 0,
         restartScene: "",   // 重新玩场景
+        promptScene: "",  // 提示场景
     },
 
     onLoad() {
@@ -25,9 +26,9 @@ cc.Class({
                     if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
                         var response = JSON.parse(request.responseText);
                         if (response.code === 1) {
-                            cc.director.loadScene(self.loadNewScene);
+                            cc.director.loadScene(self.prizeScene);
                         } else {
-                            alert("您的搭档还没有成功摇出爱混，请耐心等待！");
+                            cc.director.loadScene(self.promptScene);
                         }
                     }
                 };
