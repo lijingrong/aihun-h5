@@ -13,7 +13,7 @@ cc.Class({
 
     onLoad() {
         var self = this;
-        //this.playMusic();
+        this.playMusic();
         this.node.on("click", function (event) {
             self.clickMusicBtn();
         });
