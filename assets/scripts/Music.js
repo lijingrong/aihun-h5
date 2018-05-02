@@ -13,7 +13,7 @@ cc.Class({
 
     onLoad() {
         var self = this;
-        this.playMusic();
+        //this.playMusic();
         this.node.on("click", function (event) {
             self.clickMusicBtn();
         });
@@ -28,6 +28,10 @@ cc.Class({
 
     stopMusic: function () {
         cc.audioEngine.stop(this.current);
+        var audio = document.getElementById("musicAudio");
+        if(audio){
+            audio.pause();
+        }
     },
 
     playMusic: function () {
