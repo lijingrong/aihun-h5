@@ -1,14 +1,14 @@
 {
   "ver": "1.0.0",
-  "uuid": "17db464d-1694-4b59-be8e-fbfab77f3fd4",
+  "uuid": "ffd87b8c-b7d5-41ac-993a-82ac8e8b0d68",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
-    "puddingCountDown1": {
+    "teaGameBg": {
       "ver": "1.0.3",
-      "uuid": "4b01570e-54ed-4985-bdfc-f9818ed8d960",
-      "rawTextureUuid": "17db464d-1694-4b59-be8e-fbfab77f3fd4",
+      "uuid": "9e163b55-db68-4022-9e03-62185e9a34d0",
+      "rawTextureUuid": "ffd87b8c-b7d5-41ac-993a-82ac8e8b0d68",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
