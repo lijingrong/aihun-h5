@@ -28,6 +28,10 @@ cc.Class({
 
     stopMusic: function () {
         cc.audioEngine.stop(this.current);
+        var audio = document.getElementById("musicAudio");
+        if(audio){
+            audio.pause();
+        }
     },
 
     playMusic: function () {
