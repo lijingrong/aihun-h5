@@ -876,7 +876,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 640,
-      "height": 622
+      "height": 624
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -903,7 +903,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "dc0ef616-ef73-4eb2-9050-8e2fa4130425"
+      "__uuid__": "8ca51691-b126-480d-95b0-5bff3cdf3057"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -918,7 +918,9 @@
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_atlas": null
+    "_atlas": {
+      "__uuid__": "f2c38ba6-29f6-4a01-8755-b57af25ed765"
+    }
   },
   {
     "__type__": "cc.Animation",
@@ -952,7 +954,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 0,
+    "_bottom": -1,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -1159,8 +1161,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97,
-      "height": 134
+      "width": 100,
+      "height": 136
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1187,7 +1189,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "44131999-c4c6-49d1-87ae-3ef43a413c4c"
+      "__uuid__": "245aa508-e1f9-49dc-bfcb-12a504d5b229"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1202,7 +1204,9 @@
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_atlas": null
+    "_atlas": {
+      "__uuid__": "239d8dce-85e3-4290-9e87-f87ceee61348"
+    }
   },
   {
     "__type__": "cc.Animation",
@@ -1284,8 +1288,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 321,
-      "height": 456
+      "width": 324,
+      "height": 458
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1312,7 +1316,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "89c1bb6a-7ca3-4d12-abf8-46edcfdb341a"
+      "__uuid__": "6d6d67b4-268b-4e28-b76e-908e05ba347a"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1327,7 +1331,9 @@
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_atlas": null
+    "_atlas": {
+      "__uuid__": "25bdc73f-2c51-43db-b8b6-c83f87f9cacd"
+    }
   },
   {
     "__type__": "cc.BoxCollider",
