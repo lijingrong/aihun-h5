@@ -13,7 +13,9 @@ cc.Class({
 
     onLoad() {
         var self = this;
-        this.playMusic();
+        if(cc.sys.os===cc.sys.OS_ANDROID){
+            this.playMusic();
+        }
         this.node.on("click", function (event) {
             self.clickMusicBtn();
         });
