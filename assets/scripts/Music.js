@@ -13,9 +13,9 @@ cc.Class({
 
     onLoad() {
         var self = this;
-        if(cc.sys.os===cc.sys.OS_ANDROID){
+        if (cc.sys.os === cc.sys.OS_ANDROID) {
             this.playMusic();
-        }else{
+        } else {
             cc.audioEngine.play(this.audio, false, 0);
         }
         this.node.on("click", function (event) {
@@ -33,7 +33,7 @@ cc.Class({
     stopMusic: function () {
         cc.audioEngine.stop(this.current);
         var audio = document.getElementById("musicAudio");
-        if(audio){
+        if (audio) {
             audio.pause();
         }
     },
