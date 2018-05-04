@@ -1366,8 +1366,8 @@
     "cows": {
       "__id__": 32
     },
-    "distance": 20,
-    "shakeThreshold": 1000,
+    "distance": 8,
+    "shakeThreshold": 2400,
     "standardDistance": 400,
     "minScale": 0.4,
     "cdSpeed": 0.1,

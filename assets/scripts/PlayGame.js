@@ -39,7 +39,10 @@ cc.Class({
         this._time = 10;   // 摇动时间最小间隔
         this._scale = 1.0;  // 缩放值
         this._enableDeviceMotion();
-
+        if (cc.sys.os === cc.sys.OS_ANDROID) {
+            this.shakeThreshold = 3000;
+        }
+        
         // 进度条
         this.progressBar.progress = 1.0;
         this._pingpong = true;  // 进度变动控制
@@ -77,7 +80,7 @@ cc.Class({
                     this._scale = (this.cows.y - this.node.y) / this.standardDistance;
                 }
 
-                var action = cc.moveTo(0.25, this.node.x, this.node.y + (speed / this.shakeThreshold) * this.distance);
+                var action = cc.moveTo(0.25, this.node.x, this.node.y + this.distance);
                 var scale = cc.scaleTo(0.25, this._scale);
                 this.node.runAction(cc.spawn(action, scale));  // 移动加缩放
             }
