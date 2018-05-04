@@ -21,8 +21,10 @@ cc.Class({
     },
 
     onLoad() {
+        var Config = require("Config");
         if (this.singleBtn !== null) {
             this.singleBtn.node.on("click", function () {
+                Config.isSingle = 1;
                 this.switchScene(this.singleScene);
             }, this);
         }
