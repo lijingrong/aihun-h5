@@ -1,14 +1,14 @@
 {
   "ver": "1.0.0",
-  "uuid": "00872d9c-f71d-44a2-895f-3a9ffbb5f576",
+  "uuid": "f195f1a5-585d-41a7-a0c7-943fa2534144",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
     "teaDoubleRemixSuccess": {
       "ver": "1.0.3",
-      "uuid": "db82d0f4-074e-4a75-ab86-f94e3a0e1a72",
-      "rawTextureUuid": "00872d9c-f71d-44a2-895f-3a9ffbb5f576",
+      "uuid": "a32464a2-47a4-4a57-a6dd-ef9e7f460524",
+      "rawTextureUuid": "f195f1a5-585d-41a7-a0c7-943fa2534144",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
