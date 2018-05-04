@@ -16,7 +16,7 @@ cc.Class({
         this._last_update_time = 0;
         this._time = 10;   // 摇动时间最小间隔
         this._enableDeviceMotion();
-        this._can_shake = false;   // 能摇到下一场景的判断，搭档玩成功才可以
+        this._partner_success = false;   // 能摇到下一场景的判断，搭档玩成功才可以
 
         // 每秒请求后端，判断搭档是否游戏失败，失败跳转到重新开始场景
         this.countDown = function () {
@@ -28,7 +28,7 @@ cc.Class({
                     var _response = JSON.parse(_request.responseText);
                     if (_response.code === 1) {
                         _self.unschedule(_self.countDown);
-                        _self._can_shake = true;
+                        _self._partner_success = true;
                     } else if (_response.code === 0) {
                         _self.unschedule(_self.countDown);
                         cc.director.loadScene(_self.restartScene);
@@ -39,6 +39,11 @@ cc.Class({
             _request.send();
         };
         this.schedule(this.countDown, this.time);
+
+        this._can_shake = false;  // 2s后开始摇动才有效果
+        this.scheduleOnce(function () {
+            this._can_shake = true;
+        }, 2);
     },
 
     /** 启用重力感应 */
@@ -66,7 +71,7 @@ cc.Class({
 
             var speed = (Math.abs(acc_x + acc_y + acc_z - last_acc_x - last_acc_y - last_acc_z) / _diff_time * 10000).toFixed(2);
 
-            if (speed > this.shakeThreshold) {
+            if (speed > this.shakeThreshold && this._partner_success && this._can_shake) {
                 this.togetherShake();
             }
             last_acc_x = acc_x;
@@ -84,7 +89,7 @@ cc.Class({
         request.onreadystatechange = function () {
             if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
                 var response = JSON.parse(request.responseText);
-                if (response.code === 1 && self._can_shake) {
+                if (response.code === 1) {
                     cc.director.loadScene(self.loadNewScene);
                 }
             }
