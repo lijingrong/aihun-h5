@@ -42,6 +42,8 @@ cc.Class({
         if (cc.sys.os === cc.sys.OS_ANDROID) {
             this.shakeThreshold = 3000;
         }
+
+        this._is_collision = false;  // 是否碰撞
         
         // 进度条
         this.progressBar.progress = 1.0;
@@ -80,8 +82,8 @@ cc.Class({
                     this._scale = (this.cows.y - this.node.y) / this.standardDistance;
                 }
 
-                var action = cc.moveTo(0.25, this.node.x, this.node.y + this.distance);
-                var scale = cc.scaleTo(0.25, this._scale);
+                var action = cc.moveTo(0.5, this.node.x, this.node.y + this.distance);
+                var scale = cc.scaleTo(0.5, this._scale);
                 this.node.runAction(cc.spawn(action, scale));  // 移动加缩放
             }
             last_acc_x = acc_x;
@@ -92,6 +94,7 @@ cc.Class({
 
     /** 当碰撞产生的时候调用 */
     onCollisionEnter: function (other, self) {
+        this._is_collision = true;
         if (Config.isSingle === 0) {  // 双人游戏时跳转
             this.saveGameState(1, this.doubleSucessScene);
         } else {
@@ -116,7 +119,7 @@ cc.Class({
         /** 倒计时开始 */
         this.countDown = function () {
             // 当时间小于等于0，停止计时器
-            if (self.cdTime <= 0) {
+            if (self.cdTime <= 0 && !self._is_collision) {
                 self.stopMusic();
                 if (Config.isSingle === 0) {  // 双人游戏时跳转
                     self.saveGameState(0, self.doubleFailScene);
