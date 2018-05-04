@@ -1,14 +1,14 @@
 {
   "ver": "1.0.0",
-  "uuid": "46fbea70-3971-481b-ab62-4bb287ad301b",
+  "uuid": "956c7c39-a4c9-4d3f-ac8c-269701b26828",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
-    "puddingDoubleRemixSuccess": {
+    "receiveFundsBtn": {
       "ver": "1.0.3",
-      "uuid": "4a2e0db0-2f85-471c-b55b-ac8faeb27f01",
-      "rawTextureUuid": "46fbea70-3971-481b-ab62-4bb287ad301b",
+      "uuid": "14e151bd-5959-47eb-86c9-a7314fd4ece3",
+      "rawTextureUuid": "956c7c39-a4c9-4d3f-ac8c-269701b26828",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -16,10 +16,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 640,
-      "height": 1136,
-      "rawWidth": 640,
-      "rawHeight": 1136,
+      "width": 288,
+      "height": 104,
+      "rawWidth": 288,
+      "rawHeight": 104,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

@@ -18,6 +18,7 @@ cc.Class({
 
         if (this.nextBtn !== null) {
             this.nextBtn.node.on("click", function () {
+                cc.log("123456");
                 var self = this;
                 var url = Config.domain + "/aihun/isPartnerSharked";
                 var params = "gameTeamId=" + Config.gameTeamId + "&userId=" + Config.uid;
