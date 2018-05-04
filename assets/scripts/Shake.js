@@ -16,6 +16,7 @@ cc.Class({
         this._last_update_time = 0;
         this._time = 10;   // 摇动时间最小间隔
         this._enableDeviceMotion();
+        this._can_shake = false;   // 能摇到下一场景的判断，搭档玩成功才可以
 
         // 每秒请求后端，判断搭档是否游戏失败，失败跳转到重新开始场景
         this.countDown = function () {
@@ -27,6 +28,7 @@ cc.Class({
                     var _response = JSON.parse(_request.responseText);
                     if (_response.code === 1) {
                         _self.unschedule(_self.countDown);
+                        _self._can_shake = true;
                     } else if (_response.code === 0) {
                         _self.unschedule(_self.countDown);
                         cc.director.loadScene(_self.restartScene);
@@ -82,7 +84,7 @@ cc.Class({
         request.onreadystatechange = function () {
             if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
                 var response = JSON.parse(request.responseText);
-                if (response.code === 1) {
+                if (response.code === 1 && self._can_shake) {
                     cc.director.loadScene(self.loadNewScene);
                 }
             }
