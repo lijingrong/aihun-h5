@@ -94,7 +94,13 @@ cc.Class({
 
     /** 当碰撞产生的时候调用 */
     onCollisionEnter: function (other, self) {
+        /** 碰撞后，self 物体快速移动与 other 物体 X 坐标相同的位置 */
+        var moveAction = cc.moveTo(0.1, this.cows.x, this.node.y);
+        this.node.runAction(moveAction);
+
         this._is_collision = true;
+
+        /** 碰撞后切换下一场景 */
         if (Config.isSingle === 0) {  // 双人游戏时跳转
             this.saveGameState(1, this.doubleSucessScene);
         } else {
@@ -134,6 +140,18 @@ cc.Class({
         };
         this.schedule(this.countDown, 1);
         /** 倒计时结束 */
+
+        /** 奶牛左右移动 */
+        var _cows_x = this.cows.x;
+        var cowsMoveAction = cc.sequence(
+            cc.moveTo(0.5, _cows_x + 35, this.cows.y),
+            cc.delayTime(0.3),
+            cc.moveTo(0.5, _cows_x, this.cows.y),
+            cc.moveTo(0.5, _cows_x - 35, this.cows.y),
+            cc.delayTime(0.3),
+            cc.moveTo(0.5, _cows_x, this.cows.y),
+        );
+        this.cows.runAction(cc.repeatForever(cowsMoveAction));  // 重复
 
         /** 碰撞体系代码 */
         var manager = cc.director.getCollisionManager();
