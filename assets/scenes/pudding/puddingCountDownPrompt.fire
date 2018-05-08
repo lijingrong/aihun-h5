@@ -24,7 +24,7 @@
     "_active": true,
     "_components": [],
     "_prefab": null,
-    "_id": "c3482c0b-6ce1-4759-b74a-e3c0eeb7c623",
+    "_id": "ba0c39ba-1b7f-4702-9f67-2d6656f10d25",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -173,7 +173,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "9e163b55-db68-4022-9e03-62185e9a34d0"
+      "__uuid__": "f8932849-cd88-4718-89e2-c8f3c4c0a3dd"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -206,7 +206,7 @@
       }
     ],
     "_prefab": null,
-    "_id": "ebiQYQLxVFc4KleTKYKur6",
+    "_id": "801rQC9ndKEKKEkDD0f33I",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -251,7 +251,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "2ca6cd0c-643d-45e0-8a23-998cc23e101b"
+      "__uuid__": "fb45199d-a8bb-419b-a69e-dab5f814c9e7"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -284,7 +284,7 @@
       }
     ],
     "_prefab": null,
-    "_id": "65lAW9Co1IToXnqG/WW41i",
+    "_id": "bfurpWJ95NLZOFiWhbQoCs",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -408,10 +408,7 @@
       "__id__": 10
     },
     "_enabled": true,
-    "audio": {
-      "__uuid__": "08b3c3d0-0eab-4295-b73b-2eb19b2a5e92"
-    },
-    "time": 1,
-    "loadNewScene": "teaCountDownPrompt"
+    "time": 2,
+    "loadNewScene": "puddingGame"
   }
 ]

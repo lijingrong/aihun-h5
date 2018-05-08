@@ -412,6 +412,6 @@
       "__uuid__": "08b3c3d0-0eab-4295-b73b-2eb19b2a5e92"
     },
     "time": 1,
-    "loadNewScene": "puddingGame"
+    "loadNewScene": "puddingCountDownPrompt"
   }
 ]
