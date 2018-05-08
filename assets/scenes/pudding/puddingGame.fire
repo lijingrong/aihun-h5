@@ -1385,7 +1385,7 @@
       "__id__": 32
     },
     "distance": 10,
-    "shakeThreshold": 2000,
+    "shakeThreshold": 1750,
     "standardDistance": 400,
     "minScale": 0.4,
     "cdSpeed": 0.1,

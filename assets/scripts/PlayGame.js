@@ -40,7 +40,7 @@ cc.Class({
         this._scale = 1.0;  // 缩放值
         this._enableDeviceMotion();
         if (cc.sys.os === cc.sys.OS_ANDROID) {
-            this.shakeThreshold = 3000;
+            this.shakeThreshold = 2500;
         }
 
         this._is_collision = false;  // 是否碰撞
