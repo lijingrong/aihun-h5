@@ -30,23 +30,23 @@ cc.Class({
         request.send(params);
 
                 //websock 实现
-                var socket = new SockJS('/aihun-websocket');
-                var stompClient = Stomp.over(socket);
-                stompClient.connect({}, function (frame) {
-                    stompClient.subscribe('/topic/pushGameTeam', function (greeting) {
-                        var result = JSON.parse(greeting.body);
-                        if(result.code===1 && result.data && result.data.uid===Config.uid){
-                            console.log('code ======:'+result.code);
-                            if (stompClient !== null) {
-                                stompClient.disconnect();
-                            }
-                            cc.director.loadScene(self.loadNewScene);
-                        }
-                    });
-                });
+                // var socket = new SockJS('/aihun-websocket');
+                // var stompClient = Stomp.over(socket);
+                // stompClient.connect({}, function (frame) {
+                //     stompClient.subscribe('/topic/pushGameTeam', function (greeting) {
+                //         var result = JSON.parse(greeting.body);
+                //         if(result.code===1 && result.data && result.data.uid===Config.uid){
+                //             console.log('code ======:'+result.code);
+                //             if (stompClient !== null) {
+                //                 stompClient.disconnect();
+                //             }
+                //             cc.director.loadScene(self.loadNewScene);
+                //         }
+                //     });
+                // });
 
         // 每秒请求后端，判断B用户扫码成功，并跳转游戏场景
-        /*this.callback = function () {
+        this.callback = function () {
             var _self = this;
             var _url = Config.domain + "/aihun/isFollowerJoin";
             var _request = cc.loader.getXMLHttpRequest();
@@ -64,7 +64,7 @@ cc.Class({
             _request.setRequestHeader("CONTENT-TYPE", "application/x-www-form-urlencoded");
             _request.send(_params);
         };
-        this.schedule(this.callback, this.time);*/
+        this.schedule(this.callback, this.time);
     },
 
     start() {

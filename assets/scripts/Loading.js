@@ -19,7 +19,7 @@ cc.Class({
                 cc.director.loadScene(self.loadNewScene);
             } else {
                 //ajax 实现
-                /*var url = Config.domain + "/aihun/getGameTeam?uid=" + uid + "&userId=" + Config.uid;
+                var url = Config.domain + "/aihun/getGameTeam?uid=" + uid + "&userId=" + Config.uid;
                 var request = cc.loader.getXMLHttpRequest();
                 request.onreadystatechange = function () {
                     if (request.readyState == 4 && (request.status >= 200 && request.status < 400)) {
@@ -36,33 +36,33 @@ cc.Class({
                     }
                 };
                 request.open("GET", url, true);
-                request.send(null);*/
+                request.send(null);
                 
                 //websock实现
-                var socket = new SockJS('/aihun-websocket');
-                var stompClient = Stomp.over(socket);
-                stompClient.connect({}, function (frame) {
-                    stompClient.send("/app/buildGameTeam", {}, JSON.stringify({'uid': uid,'userId':Config.uid}));
-                    stompClient.subscribe('/topic/pushGameTeam', function (greeting) {
-                        var result = JSON.parse(greeting.body);
-                        if(result.code===1){
-                            console.log('code ======:'+result.code);
-                            Config.isFollower = 1;
-                            Config.isSingle = 0;
-                            Config.gameTeamId = result.data.id;
-                            if (stompClient !== null) {
-                                stompClient.disconnect();
-                            }
-                            cc.director.loadScene("teaBeginGame");
-                        }else{
-                            if (stompClient !== null) {
-                                stompClient.disconnect();
-                            }
-                            cc.director.loadScene(self.loadNewScene);
-                        }
+                // var socket = new SockJS('/aihun-websocket');
+                // var stompClient = Stomp.over(socket);
+                // stompClient.connect({}, function (frame) {
+                //     stompClient.send("/app/buildGameTeam", {}, JSON.stringify({'uid': uid,'userId':Config.uid}));
+                //     stompClient.subscribe('/topic/pushGameTeam', function (greeting) {
+                //         var result = JSON.parse(greeting.body);
+                //         if(result.code===1){
+                //             console.log('code ======:'+result.code);
+                //             Config.isFollower = 1;
+                //             Config.isSingle = 0;
+                //             Config.gameTeamId = result.data.id;
+                //             if (stompClient !== null) {
+                //                 stompClient.disconnect();
+                //             }
+                //             cc.director.loadScene("teaBeginGame");
+                //         }else{
+                //             if (stompClient !== null) {
+                //                 stompClient.disconnect();
+                //             }
+                //             cc.director.loadScene(self.loadNewScene);
+                //         }
 
-                    });
-                });
+                //     });
+                // });
 
             }
         };
