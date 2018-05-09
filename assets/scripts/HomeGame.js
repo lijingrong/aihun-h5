@@ -25,12 +25,14 @@ cc.Class({
         if (this.singleBtn !== null) {
             this.singleBtn.node.on("click", function () {
                 Config.isSingle = 1;
+                Config.isFollower = 0;
                 this.switchScene(this.singleScene);
             }, this);
         }
         
         if (this.doubleBtn !== null) {
             this.doubleBtn.node.on("click", function () {
+                Config.isFollower = 0;
                 this.switchScene(this.doubleScene);
             }, this);
         }

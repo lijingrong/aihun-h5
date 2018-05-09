@@ -177,7 +177,12 @@ cc.Class({
         } else if (this.targetID === 2) {
             cc.director.loadScene("thirdPrize");
         } else {
-            cc.director.loadScene("prizelessA");
+            var Config = require("Config");
+            if (Config.isFollower === 1) {
+                cc.director.loadScene("prizelessB");
+            } else {
+                cc.director.loadScene("prizelessA");
+            }
         }
     }
 });
