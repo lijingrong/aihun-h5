@@ -1,14 +1,14 @@
 {
   "ver": "1.0.0",
-  "uuid": "cf33ecc2-76d6-4b8c-abf0-fe9d32e4a320",
+  "uuid": "3f6651bc-8303-488b-a042-ee637f265aaa",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
-    "puddingDoubleGameFail": {
+    "reverseAirplane": {
       "ver": "1.0.3",
-      "uuid": "36ca66b4-ad75-43b8-abcf-eae391139b77",
-      "rawTextureUuid": "cf33ecc2-76d6-4b8c-abf0-fe9d32e4a320",
+      "uuid": "63173d1f-ace0-451e-abd9-9a7e7e002d31",
+      "rawTextureUuid": "3f6651bc-8303-488b-a042-ee637f265aaa",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -16,10 +16,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 640,
-      "height": 1136,
-      "rawWidth": 640,
-      "rawHeight": 1136,
+      "width": 116,
+      "height": 84,
+      "rawWidth": 116,
+      "rawHeight": 84,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
